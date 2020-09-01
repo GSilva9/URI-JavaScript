@@ -1,0 +1,14 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+let ent = +(lines[0]);
+
+let hora = parseInt(ent/3600)
+let resto = ent % 3600
+
+let minutos = parseInt(resto/60)
+let resto1 = resto % 60
+
+let segundo = resto1 
+
+console.log(`${hora}:${minutos}:${segundo}`)
