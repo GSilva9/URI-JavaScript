@@ -1,0 +1,13 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+
+var varlores = input.split('\n');
+
+var nome = varlores.shift();
+var salarioFixo = parseFloat(varlores.shift());
+var totalVendas = parseFloat(varlores.shift());
+
+var comissao = (totalVendas*0.15);
+
+var salarioFinal = (salarioFixo+comissao);
+
+console.log(`TOTAL = R$ ${salarioFinal.toFixed(2)}`);
