@@ -1,0 +1,34 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+let num = +(lines[0]);
+
+console.log(num)
+
+let cem = (num/100);
+let resto = num % 100;
+
+console.log(`${Math.floor(cem)} nota(s) de R$ 100,00`);
+
+let cinq1 = resto/50;
+let cinq = resto%50;
+console.log(`${Math.floor(cinq1)} nota(s) de R$ 50,00`)
+
+let vinte = cinq/20;
+let vinte1 = cinq%20;
+console.log(`${Math.floor(vinte)} nota(s) de R$ 20,00`)
+
+let dez = vinte1/10
+let dez1 = vinte1 % 10
+console.log(`${Math.floor(dez)} nota(s) de R$ 10,00`)
+
+let cinco = dez1/5;
+let cinco1 = dez1%5;
+console.log(`${Math.floor(cinco)} nota(s) de R$ 5,00`);
+
+let dois = cinco1/2
+let dois1 = cinco1%2
+console.log(`${Math.floor(dois)} nota(s) de R$ 2,00`);
+
+let um = dois1/1;
+console.log(`${Math.floor(um)} nota(s) de R$ 1,00`);
