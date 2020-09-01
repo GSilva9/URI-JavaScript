@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var entrada = lines.shift().split(" ");
+
+var a = parseFloat(entrada.shift());
+var b = parseFloat(entrada.shift());
+var c = parseFloat(entrada.shift());
+
+var maiorab = Math.max(a,b,c);
+
+console.log(`${maiorab} eh o maior`);
