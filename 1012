@@ -1,0 +1,31 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+
+var lines = input.split('\n');
+
+var entrada = lines.shift().split(" ")
+
+var A = parseFloat(entrada.shift());
+var B = parseFloat(entrada.shift());
+var C = parseFloat(entrada.shift());
+
+var triaRet = (A*C)/2
+
+console.log(`TRIANGULO: ${triaRet.toFixed(3)}`);
+
+var pi = 3.14159;
+
+var circulo = (pi * (C * C));
+
+console.log(`CIRCULO: ${circulo.toFixed(3)}`);
+
+var areaTrap = ((A+B)*C)/2
+
+console.log(`TRAPEZIO: ${areaTrap.toFixed(3)}`);
+
+var areaQuad = B*B
+
+console.log(`QUADRADO: ${areaQuad.toFixed(3)}`);
+
+var areaRet = A*B
+
+console.log(`RETANGULO: ${areaRet.toFixed(3)}`);
