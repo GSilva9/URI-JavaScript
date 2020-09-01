@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+
+var varlores = input.split('\n');
+
+var A = parseInt(varlores.shift())
+var B = parseInt(varlores.shift())
+var C = parseInt(varlores.shift())
+var D = parseInt(varlores.shift())
+
+var diferenca = (A*B - C*D)
+
+console.log(`DIFERENCA = ${diferenca}`)
